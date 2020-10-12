@@ -2,8 +2,8 @@
 Nicole McDermott E - 115 LG Lab 4.1
 I pledge my honor that I have abided by the Stevens Honor System
 
-[Program-2] Write a program that accepts an indefinite set of numbers until the user enters ì-1î. 
-In other words, the program keeps accepting new values until the user provides a ì-1î (your program accepts all values, and discards the ì-1î). 
+[Program-2] Write a program that accepts an indefinite set of numbers until the user enters ‚Äú-1‚Äù. 
+In other words, the program keeps accepting new values until the user provides a ‚Äú-1‚Äù (your program accepts all values, and discards the ‚Äú-1‚Äù). 
 When done, the program prints back to the user: 
 (i) the sum of all numbers entered (except -1), (ii) the minimum value seen across all numbers (except -1), and (iii) the maximum value across all numbers (except -1).
 
