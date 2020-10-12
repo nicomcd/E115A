@@ -36,7 +36,7 @@ and is able to perform basic math on them
     cout << "Division: " << a / b << endl; //divides the floats
     cout << "Multiplication: " << a * b << endl; //multiplies the floats
     
-/**i:   prompts the user to enter two ‘string’ values (e.g., name and address) and 
+/**i:   prompts the user to enter two â€˜stringâ€™ values (e.g., name and address) and 
 is able to concatenate these two strings and print back the result.
 **/
     cout << "\nPart iii: concatenate strings!~" << endl;
