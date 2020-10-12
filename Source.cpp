@@ -1,12 +1,17 @@
-/*=================================================================
-Nicole McDermott E - 115 LG Lab 4.1
+ï»¿/*=================================================================
+Nicole McDermott E - 115 LG Lab 3
 I pledge my honor that I have abided by the Stevens Honor System
+Create a grade predictor program for a hypothetical course that comprises the following elements: (i) six homework scores, (ii) two midterm scores,
+and (iii) one final. The following weightage is used to arrive at the final cumulative score: 40% from homeworks, 40% from midterms and 20% from the final.
+A final letter grade is arrived at based on the following score range: (i) â€˜Aâ€™ for scores 91--100, (ii) â€˜Bâ€™ for 81--90, (ii) â€˜Câ€™ for 71--80 and D otherwise.
 
-[Program-2] Write a program that accepts an indefinite set of numbers until the user enters “-1”. 
-In other words, the program keeps accepting new values until the user provides a “-1” (your program accepts all values, and discards the “-1”). 
-When done, the program prints back to the user: 
-(i) the sum of all numbers entered (except -1), (ii) the minimum value seen across all numbers (except -1), and (iii) the maximum value across all numbers (except -1).
+Hope your day is going well! 
 
+My Notes
+-----6 cout and cin for homework scores, 0.4 a b c d e f
+-----2 cout cin for midterm 0.4, m n
+-----1 cout cin for final 0.2, z
+-----one if for 91-100 and one else if for 81-90 and one else if for 71-80 for C and else for anything less
 ==================================================================*/
 #include<iostream>
 #include<cmath>
@@ -14,42 +19,42 @@ When done, the program prints back to the user:
 using namespace std;
 
 int main() {
-/*Intialize 5 variables, one boolean in order to run the while loop (asking), one for user input (X)
-* the sum is set to 0 because there is no value yet
-* to find the maximum integer it is set to the minimum so that whatever is more than it will override it
-* to find the minimum integer it is set to the maximum so that whatever is less than it will override it 
-*/
-    bool asking = true;
-    int x;
-    int sum = 0;
-    int min = INT_MAX;
-    int max = INT_MIN;
+    float a, b, c, d, e, f, m, n, z, grade; //Initializing the variables for the grades, 6 for homework, 2 for midterms, 1 for final, 1 for total grade
+    cout << "Let's calculate your hopefully good grade!~\nWhat is your first homework score?" << endl;
+    cin >> a;
+    cout << "What is your second homework score?" << endl; //For each we just assign the variable to user input 
+    cin >> b;
+    cout << "What is your third homework score?" << endl;
+    cin >> c;
+    cout << "What is your fourth homework score?" << endl;
+    cin >> d;
+    cout << "What is your fifth homework score?" << endl;
+    cin >> e; 
+    cout << "What is your sixth homework score?" << endl;
+    cin >> f;
+    cout << "What is your first midterm score?" << endl;
+    cin >> m;
+    cout << "What is your second midterm score?" << endl;
+    cin >> n;
+    cout << "What is your final score?" << endl;
+    cin >> z;
 
-    //while loop will stop is asking becomes false, it becomes false when x = -1
-    while (asking) {
-        //asks for user input each loop
-        cout << "Please input an integer, to stop the loop input -1!" << endl;
-        cin >> x;
-        //stops the code if x = -1 first
-        if (x == -1) {
-            asking == false;
-            break;
-        } else {
-            //otherwise add to the sum and check is x is more than max or less than min
-            sum += x;
-            if (x > max) {
-                max = x;
-            }
-            if (x < min) {
-                min = x;
-            }
+    //calculates the average of each type of score, multiplies it by the weight, and adds it together!
+    grade = (((a + b + c + d + e + f) / 6)*0.4) + (((m + n) / 2)*0.4) + ((z)*0.2);
+  
+    cout << "Your final grade is an A if the average is 100-91,\na B for 90-81, a C for 80-71, or a D for less...\nAt least you can't take an L....\n\n" << endl;
+        if (grade > 100) {
+            cout << "Your grade is an A! Treat your self~ :)" << endl;
         }
-    }
-
-    cout << "The sum of the integers you gave: " << sum << endl;
-    cout << "The smaller integer you gave is: " << min << endl;
-    cout << "The largest integer you gave is: " << max << endl;
-    cout << "\nHonestly, this is pretty cool, I hope your day is going nicely!!!~" << endl;
-
+        else if (grade < 91 && grade > 81) {
+            cout << "Your grade is a B! Not bad!" << endl; 
+        }
+        else if (grade < 80 && grade > 71) {
+            cout << "Your grade is a C, oof." << endl;
+        }
+        else {
+            cout << "Your grade is a D :/\nbut here, take an L" << endl;
+        }
+ 
     return 0;
 }
