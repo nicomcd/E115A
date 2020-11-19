@@ -10,7 +10,6 @@ When done, the program prints back to the user:
 ==================================================================*/
 #include<iostream>
 #include<cmath>
-
 using namespace std;
 
 int main() {
@@ -25,21 +24,25 @@ int main() {
     int min = INT_MAX;
     int max = INT_MIN;
 
-    //while loop will stop is asking becomes false, it becomes false when x = -1
+    //While loop will stop is asking becomes false, it becomes false when x = -1
     while (asking) {
-        //asks for user input each loop
+        //Asks for user input each loop
         cout << "Please input an integer, to stop the loop input -1!" << endl;
         cin >> x;
-        //stops the code if x = -1 first
+        //Stops the code if x = -1
         if (x == -1) {
             asking == false;
             break;
         } else {
-            //otherwise add to the sum and check is x is more than max or less than min
+            //Otherwise add to the sum and check is x is more than max or less than min
             sum += x;
+            
+            //Checks if the integer is more than the max, if so, sets it as the new max
             if (x > max) {
                 max = x;
             }
+            
+            //Checks if the integer is less than the min, if so, sets it as the new min
             if (x < min) {
                 min = x;
             }
