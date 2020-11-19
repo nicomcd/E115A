@@ -1,38 +1,33 @@
-/*
-Nicole McDermott 11/15/20 I pledge my Honor that I have abided by the Stevens Honor System~
-By the way, I don't like soda, so I changed the drinks <3
-Hope that it was ok
-*/
+/*==================================================================
+
+Nicole McDermott E - 115 LG
+I pledge my honor that I have abided by the Stevens Honor System
+ 
+You must create a new class called â€œVendingMachineâ€,
+and perform the following using an object(variable) of this type in your main() function.
+Your VendingMachine serves four or more items to customers
+For each type, there is an initial stock of items, as well as a price per item.
+
+Your program allows users to: select an item from a simple menu.
+
+Enter a dollar amount.
+
+Your vending machine prints a success message on screen, as well as the correct change amount.
+
+If the machine runs out of stock for any item, it refunds the full amount back to the user.
+
+==================================================================*/
 
 #include<iostream>
 using namespace std;
 
-/*
-You must create a new class called “VendingMachine”,
-and perform the following using an object(variable) of this type in your main() function.
-Your VendingMachine serves four or more items to customers (e.g., Sprite, Water, etc., )
-For each type, there is an initial stock of items(e.g., 30 cans of Sprite),
-as well as a price per item(e.g., Sprite is $1.25).
-
-
-Your program allows users to :
-select an item from a simple menu(e.g., “Press 1 for Sprite”, “Press 2 for water” etc., )
-
-Enter a dollar amount(e.g., “Insert cash $5, $10, or $20”)
-
-Your vending machine prints a success message on screen, as well as the correct change amount
-(e.g, User inserts $5 for Sprite costing $1.25, the correct change amount is $3.75)
-
-If the machine runs out of stock for any item, it refunds the full amount back to the user.
-*/
-
 class VendingMachine {
 public:
-	//1. Attributes: what is the physical make up of this actor? 
+	//Initializes variables withing the VendingMachine class
 	int matchaLatte, boxedWater, bananaMilk, strawberryMilk, cinnamonTea, blackMilkTea;
 	float matchaPrice, waterPrice, bananaPrice, strawberryPrice, cinnamonPrice, teaPrice;
 
-	//2. Construction: when a new variable of this type gets created, what is the default attribute?
+	//Gives the default value for each variable in VendingMachine class
 	VendingMachine() {
 		//Quantity
 		matchaLatte = 5;
@@ -51,13 +46,13 @@ public:
 		cinnamonPrice = 3.99;
 	}
 
+	//Function that returns the change
 	float payment(float x) {
-
 		int money;
 		float change;
-		cout << "\nPress 1 to insert $5!" << endl;
-		cout << "Press 2 to inset $10!" << endl;
-		cout << "Press 3 to insert $100!" << endl;
+		cout << "\n[1] to insert $5" << endl;
+		cout << "[2] to inset $10" << endl;
+		cout << "[3] to insert $100" << endl;
 		cout << "Anything else to quit the program...\n" << endl;
 		cin >> money;
 
@@ -76,17 +71,17 @@ public:
 		}
 	}
 
-	//3. Functionality: what functions is this actor allowed to perform?
+	//Function for each product in the VendingMachine
 	//MATCHA LATTE
 	void getMeMatcha() {
 		float paid = payment(matchaPrice);
 		if (matchaLatte > 0) {
 			cout << "\nYour change is " << paid << endl;
-			cout << "Here is a can of matcha latte~" << endl;
+			cout << "Here is a can of Matcha Latte~" << endl;
 			matchaLatte--;
 		}
 		else {
-			cout << "\nSorry, ran out of matcha latte! :(\nYou can have a refund..." << endl;
+			cout << "\nSorry, no Matcha Latte! :(\nYou can have a refund..." << endl;
 		}
 	}
 
@@ -95,11 +90,11 @@ public:
 		float paid = payment(waterPrice);
 		if (boxedWater > 0) {
 			cout << "\nYour change is " << paid << endl;
-			cout << "Here is a box of water" << endl;
+			cout << "Here is a box of Water" << endl;
 			boxedWater--;
 		}
 		else {
-			cout << "\nSorry no water, thirst.\nYou can have a refund..." << endl;
+			cout << "\nSorry no Water, thirst.\nYou can have a refund..." << endl;
 		}
 	}
 
@@ -134,7 +129,7 @@ public:
 		float paid = payment(cinnamonPrice);
 		if (cinnamonTea > 0) {
 			cout << "\nYour change is " << paid << endl;
-			cout << "Here is my mom's cinnamon tea, it's pretty good~" << endl;
+			cout << "Here is my mom's Cinnamon Tea, it's pretty good~" << endl;
 			cinnamonTea--;
 		}
 		else {
@@ -164,10 +159,10 @@ int main() {
 	while (1) {
 		cout << "\n[1] Matcha Latte" << endl;
 		cout << "[2] Boxed Water" << endl;
-		cout << "[3] Strawberry Milk!" << endl;
-		cout << "[4] Banana Milk!" << endl;
-		cout << "[5] Cinnamon Tea!" << endl;
-		cout << "[6] Black Milk Tea!" << endl;
+		cout << "[3] Strawberry Milk" << endl;
+		cout << "[4] Banana Milk" << endl;
+		cout << "[5] Cinnamon Tea" << endl;
+		cout << "[6] Black Milk Tea" << endl;
 		cout << "Anything else to quit the program...\n" << endl;
 		cin >> choice;
 
