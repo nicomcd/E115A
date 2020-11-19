@@ -1,5 +1,5 @@
 ﻿/*=================================================================
-Nicole McDermott E - 115 LG Lab 3
+Nicole McDermott E - 115 LG 
 I pledge my honor that I have abided by the Stevens Honor System
 Create a grade predictor program for a hypothetical course that comprises the following elements: (i) six homework scores, (ii) two midterm scores,
 and (iii) one final. The following weightage is used to arrive at the final cumulative score: 40% from homeworks, 40% from midterms and 20% from the final.
