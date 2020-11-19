@@ -20,7 +20,7 @@ using namespace std;
 
 int main() {
     float a, b, c, d, e, f, m, n, z, grade; //Initializing the variables for the grades, 6 for homework, 2 for midterms, 1 for final, 1 for total grade
-    cout << "Let's calculate your hopefully good grade!~\nWhat is your first homework score?" << endl;
+    cout << "Let's calculate your (hopefully good) grade!~\nWhat is your first homework score?" << endl;
     cin >> a;
     cout << "What is your second homework score?" << endl; //For each we just assign the variable to user input 
     cin >> b;
@@ -39,12 +39,12 @@ int main() {
     cout << "What is your final score?" << endl;
     cin >> z;
 
-    //calculates the average of each type of score, multiplies it by the weight, and adds it together!
+    //Calculates the average of each type of score, multiplies it by the weight, and adds it together!
     grade = (((a + b + c + d + e + f) / 6)*0.4) + (((m + n) / 2)*0.4) + ((z)*0.2);
   
     cout << "Your final grade is an A if the average is 100-91,\na B for 90-81, a C for 80-71, or a D for less...\nAt least you can't take an L....\n\n" << endl;
         if (grade > 100) {
-            cout << "Your grade is an A! Treat your self~ :)" << endl;
+            cout << "Your grade is an A! Treat your self~ " << endl;
         }
         else if (grade < 91 && grade > 81) {
             cout << "Your grade is a B! Not bad!" << endl; 
