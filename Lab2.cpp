@@ -1,8 +1,8 @@
-//Nicole McDermott E - 115 LG
-//I pledge my honor that I have abided by the Stevens Honor System
+/*Nicole McDermott E - 115 LG
+* I pledge my honor that I have abided by the Stevens Honor System
+*/
 #include<iostream>
 #include<cmath>
-
 using namespace std;
 
 int main(){
@@ -10,6 +10,7 @@ int main(){
  and is able to perform basic math (+, -, *, /) on them,
  **/
     cout << "Part i: basic math with integers!~" << endl;
+ 
     int x; // initialize two integer varibles x and y
     int y;
     cout << "Enter the first integer!~" << endl;
@@ -25,6 +26,7 @@ int main(){
 and is able to perform basic math on them
 **/
     cout << "\nPart ii: basic math with floats!~" << endl;
+ 
     float a; // initialize two integer varibles x and y
     float b;
     cout << "Enter the first float!~" << endl;
@@ -40,6 +42,7 @@ and is able to perform basic math on them
 is able to concatenate these two strings and print back the result.
 **/
     cout << "\nPart iii: concatenate strings!~" << endl;
+ 
     string name; //intializes two string variables
     string addy; 
     cout << "Enter your first name please!" << endl; 
