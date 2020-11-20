@@ -3,12 +3,12 @@
 Nicole McDermott E - 115 LG
  I pledge my honor that I have abided by the Stevens Honor System
 
-Your next assignment is to simulate the actions of a realistic online Bank (letís call this ìOneClickBankî).
+Your next assignment is to simulate the actions of a realistic online Bank (let‚Äôs call this ‚ÄúOneClickBank‚Äù).
 
 Check+ or more: Use password protection to perform all transactions. Your code must ask for a passcode before it allows the user to perform any of these functions.
-When a user enters the password, your terminal should either print ëstarsí (*) or print nothing at all (i.e., one canít see the actual letters being typed on screen).
+When a user enters the password, your terminal should either print ‚Äòstars‚Äô (*) or print nothing at all (i.e., one can‚Äôt see the actual letters being typed on screen).
 The initial password can be hard-coded into your program, beyond which the user is free to change the passcode anytime as long as they can input the current passcode.
-(Hint: Youíll need to save these passcodes on a file for persistent storage).
+(Hint: You‚Äôll need to save these passcodes on a file for persistent storage).
 
 ==================================================================*/
 
